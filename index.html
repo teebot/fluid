@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>fluid - A simple css grid landing page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen:400,700|Poppins:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <h1 class="logo">fluid</h1>
+          <nav>
+            <a href="/login">Login</a>
+            <a class="button secondary" href="/login">Try fluid</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="container">
+          <div class="hero-text-container">
+            <div class="hero-text">
+              <h2 class="text-huge">A simple landing page</h2>
+              <p class="text-big">
+                An autonomous peer-to-peer network featuring distributed
+                storage. <br />Universal compression and end-to-end encryption.
+              </p>
+              <a class="button secondary" href="/login">Start free trial</a>
+              <p class="text-small">
+                30-day free trial. No credit card required.
+              </p>
+            </div>
+            <div class="hero-proof">
+              <blockquote>
+                The more users that join our network, the more powerful it
+                grows, and the better our world becomes. Available now, don’t
+                miss out!
+                <div class="author">— Monica Hall (PiedPiperCoin)</div>
+              </blockquote>
+              <blockquote>
+                We’re in this together! All of our computers and phones join in
+                a network to make the strongest supercomputer the world has ever
+                seen.
+                <div class="author">— Gavin Belson (Hooli)</div>
+              </blockquote>
+            </div>
+          </div>
+          <div class="hero-demo">
+            <div class="hero-demo-decoration hero-demo-device"></div>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <div class="container">
+          <h2 class="text-huge">
+            Powering the decentralized internet.
+          </h2>
+          <div class="features-content">
+            <div class="feature">
+              <h3>Data Storage</h3>
+              <p>
+                Adding new content? Store your data across thousands of devices,
+                making it quick and easy to access.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Compute</h3>
+              <p>
+                Need the horsepower to run a complex app service? Ensure all new
+                HPC run as smooth as ever.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Networking</h3>
+              <p>
+                Need bandwidth to meet growing demand? We provide scaling and
+                load balancing.
+              </p>
+            </div>
+          </div>
+          <a class="button secondary" href="/login">Start free trial</a>
+        </div>
+      </div>
+      <div class="pricing">
+        <div class="container">
+          <div class="pricing-content">
+            <h2 class="text-huge">One simple plan</h2>
+            <table>
+              <tr>
+                <td>Monthly price</td>
+                <td>€ 199,99</td>
+              </tr>
+              <tr>
+                <td>Unlimited nodes</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>Universal devices</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>Anisotropic filter</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>AI powered compression</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>Augmented virtuality</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td>Cancel anytime</td>
+                <td>✓</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="td-center">
+                  <a class="button secondary" href="/login">Start free trial</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="copyright" id="copyright">
+          &copy; <span id="copy-year"></span> fluid corp.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      var copyYear = document.getElementById("copy-year");
+      copyYear.innerHTML = new Date().getFullYear();
+
+      ScrollReveal.debug = true;
+      ScrollReveal().reveal(".proof, .hero-demo-device, blockquote, .feature");
+    </script>
+  </body>
+</html>

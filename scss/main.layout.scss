@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // Snook trick => e.g. 1.4rem = 14px  [https://snook.ca/archives/html_and_css/font-size-with-rem]
+  line-height: 1.4;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 1fr 120px;
+  color: $colorMain;
+  background: $bgMain;
+}
+
+h1.logo {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+blockquote {
+  color: $colorMain;
+  background: $bgMain;
+  border-radius: 4px;
+  font-style: italic;
+  border-left: 10px solid lighten($primary, 10%);
+  margin: 1rem 0 4rem 10px;
+  padding: 1.5rem 10px;
+  quotes: "\201C""\201D""\201C""\2019";
+  &:before {
+    color: lighten($primary, 10%);
+    content: open-quote;
+    font-size: 7rem;
+    line-height: 2rem;
+    margin-right: 1.25rem;
+    vertical-align: -3rem;
+  }
+
+  .author {
+    margin-top: 2rem;
+    font-style: normal;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 1.6rem 2rem;
+  border-radius: 4px;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  &.primary {
+    background: $primary;
+    color: #ffffff;
+  }
+  &.secondary {
+    color: #ffffff;
+    background: $secondary;
+  }
+  &:hover {
+    transform: translate(0, -2px);
+  }
+}
+
+header,
+footer {
+  grid-column: 1 / span 6;
+}
+
+header,
+footer {
+  background: $primary;
+  color: #ffffff;
+}
+
+header,
+footer {
+  padding: $blockPadding;
+}
+
+.container {
+  max-width: $maxContainerWidth;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  nav {
+    align-self: flex-end;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0 0 4rem;
+    }
+  }
+}
+
+main {
+  grid-column: 1 / span 6;
+}
+
+@media (max-width: 700px) {
+  .button {
+    padding: 0.8rem 1rem;
+  }
+  .header-content {
+    nav {
+      a {
+        margin: 0 0 0 0.5rem;
+      }
+    }
+  }
+}

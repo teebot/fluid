@@ -1,0 +1,132 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.hero,
+.features {
+  padding: $blockPadding;
+}
+
+.hero {
+  grid-column: 1 / span 6;
+  background: $primary;
+  color: #ffffff;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.hero-text-container {
+  grid-column: 1 / span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .hero-text {
+    width: 100%;
+    margin: 12.8rem 0 4rem 0;
+  }
+
+  .hero-proof {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .button {
+    margin: 2.4rem 0 1.2rem;
+  }
+}
+.hero-demo {
+  grid-column: 5 / span 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 2rem;
+
+  .hero-demo-decoration {
+    &.hero-demo-device {
+      background: top / contain no-repeat
+        url("./images/Apple iPhone XS Space Grey.png");
+      height: 600px;
+      width: 100%;
+    }
+  }
+}
+
+.features,
+.pricing {
+  grid-column: span 6;
+  text-align: center;
+}
+
+.features-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem auto;
+
+  .feature {
+    text-align: left;
+    width: 30rem;
+  }
+}
+
+.pricing-content {
+  margin: 8rem 0;
+
+  table {
+    margin: 4rem auto 0 auto;
+    border: 4px solid $secondary;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 7px;
+    border-spacing: 6rem 1rem;
+    td {
+      text-align: left;
+    }
+    td.td-center {
+      padding-top: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-text-container {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+
+    .hero-text {
+      margin: 2rem 0 0 0;
+      text-align: center;
+    }
+  }
+
+  .hero-demo {
+    grid-column: 1 / span 6;
+    grid-row: 2;
+  }
+
+  .features-content {
+    flex-direction: column;
+    margin: 2rem auto;
+
+    .feature {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .pricing-content table {
+    margin: 4rem auto 0 auto;
+    padding: 1rem;
+    border-spacing: 1rem 1rem;
+
+    td {
+      max-width: 14rem;
+    }
+  }
+}
